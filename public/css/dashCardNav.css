@@ -1,0 +1,275 @@
+/* this file is used for styling dashboard and having individual card view for each news article */
+/* This class is for removing anchor tag */
+.breaking-news-title a {
+    text-decoration: none;
+}
+
+.breaking-news-title {
+    align-items: center;
+    text-align: center;
+}
+
+/* This class holds news description and image at top of page */
+.breaking-news-description-div {
+
+    justify-content: center;
+    text-align: left;
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 6px;
+
+}
+
+/* this class holds image of news description at top of page */
+.breaking-news-description-image {
+    border-left: #d7dbe3 2px solid;
+    padding-left: 4px;
+    width: 200px;
+    height: 150px;
+    padding-right: 10px;
+}
+
+/* this class holds description of news description at top of page. max width is 50 to manage width */
+.breaking-news-description {
+    max-width: 50%;
+
+
+}
+
+/* this class holds main card  */
+/* this holds cards belonging to particular region */
+.content-body-news {
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: fit-content;
+    transition: 0.3s;
+    box-sizing: border-box;
+    justify-content: center;
+    padding: 2%;
+    margin: .5%;
+    margin-left: 20px;
+}
+
+/* This holds card belonging to a particular news category in individual news routes and limits width and adds scroll */
+.content-body-news-vertical {
+    display: block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    padding: 2%;
+    margin: .5%;
+    margin-left: 20px;
+    overflow-x: auto;
+}
+
+/* Circle for breaking news words purely for animation */
+#breaking_news {
+    background-color: red;
+
+
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    animation: breaking-news-animation 5s infinite;
+}
+
+/* Animation for breaking news */
+@keyframes breaking-news-animation {
+    25% {
+        width: 30px;
+        height: 30px;
+    }
+
+    50% {
+        width: 15px;
+        height: 15px;
+    }
+
+    75% {
+        width: 30px;
+        height: 30px;
+    }
+
+    100% {
+        width: 50px;
+        height: 50px;
+    }
+
+}
+
+/* INDIVIDUAL NEWS DIV */
+/* card holding news of particular region : for creating equal width */
+.news-source-div {
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 5px
+}
+
+
+/* for creating vertical border  */
+.news-source-div:not(:last-child) {
+    border-right: 1px solid #d7dbe3;
+    ;
+
+}
+
+/* Indivdual Newspaper Logo|Text  */
+.news-source-div-news-type {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.news-source-div-news-div-name {
+    font-size: 1.5rem;
+}
+
+.news-source-div-news-div-logo {
+    width: 50px;
+    height: 50px;
+    padding: 4px;
+}
+
+/********** Individual new card decorations *****************/
+.news-individual-card-view {
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        width: fit-content;
+        transition: 0.3s;
+        box-sizing: border-box;
+        justify-content: center;
+        padding:2%;
+        margin: .5%;
+		/* background-color:#051e34; */
+    /* border-radius: 10px;
+		    font-size: 1.75rem;
+    	line-height: 1.15em;  */
+    display: flex;
+    padding: 10px;
+
+
+}
+
+/* style for news type */
+.news-individual-card-view-type {
+    font-family: 'Prompt', sans-serif;
+    padding-left: 2px;
+    border-left: 3px solid #0a1633;
+    color: #d9172f;
+    text-transform: uppercase;
+    font: 1rem;
+}
+
+/* for individual news border except last element */
+.news-individual-card-view:not(:last-child) {
+    border-bottom: 1px solid #d7dbe3;
+    ;
+
+}
+
+/* for headlines */
+.news-individual-card-view-header {
+    font-size: large;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    color: #1173d0
+}
+
+/* for removind all anchor tags decorations from card view and addd font color */
+
+.news-individual-card-view a {
+    text-decoration: none;
+
+}
+
+.news-individual-card-view-date {
+    color: #A5A5A5
+}
+
+/*****REGION HEADERS ***********/
+/* this is default for all headers */
+.region-fonts {
+    color: #05111c;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding-left: 2px;
+    font-family: 'PT Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.apac {
+
+    border-left: 12px solid #0a1633;
+
+}
+
+.north-america {
+    border-left: 12px solid #00008a;
+
+}
+
+.middle-east {
+    border-left: 12px solid #006400;
+
+}
+
+.india {
+    border-left: 12px solid orange;
+}
+
+.central-asia {}
+
+/* ********************************************* */
+/* CHEVRON < Arrow */
+.triangle {
+    border-right: 10px solid;
+    border-bottom: 10px solid;
+    color: #232F34;
+    height: 10px;
+    width: 10px;
+    transform: rotate(45deg);
+
+}
+
+/* when its PC */
+@media only screen and (min-width: 600px) {
+    .news-individual-card-view {
+
+        /* padding: 4%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        box-sizing: border-box;
+        justify-content: center;
+        padding:2%;
+        margin: .5%; */
+        /* background-color:#051e34; */
+        /* border-radius: 10px; */
+        font-size: 1rem;
+        line-height: 1rem;
+
+    }
+
+    .content-body-news-vertical {
+
+        display: flex;
+    }
+
+    .content-body-news {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .news-individual-card-view-header:hover {
+        color: #0a1633;
+    }
+
+    .breaking-news-description-image {
+        width: 150px;
+        height: 112.5px
+    }
+
+
+}

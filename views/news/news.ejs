@@ -1,0 +1,57 @@
+<% layout("./boilerplate/boilerplate") %>
+	<div class="content-body">
+		<!-- News Source Header -->
+		<div>
+
+			<h1 class=" news-source-div-news-div-name">
+				<img src="<%= newsSource.newsLogo%>" alt="<%= newsSource.newsName%>"
+					class="news-source-div-news-div-logo">
+				<%= newsSource.newsName %>
+			</h1>
+
+
+		</div>
+		<!-- Counter for news category -->
+		<% counter=0 %>
+			<!-- Counter Loop for category -->
+			<% for(category of newsSource.newsList) {%>
+				<div class="news-source-div">
+
+					<div class="news-source-div-news-type">
+						<span class="region-fonts">
+							<%= category.category %>
+						</span>
+						<div class="triangle <%=counter%>"></div>
+					</div>
+				</div>
+
+				<div class="content-body-news-vertical" id="<%= counter %>">
+
+					<% for(news of category.lists){ %>
+						<div class="news-individual-card-view">
+							<div>
+								<div class="news-individual-card-view-date">
+									<%= new Date(news.dt*1000).toLocaleDateString("en-is") %>
+								</div>
+								<% if(news.image_url !==null){ %>
+
+									<img src="<%= news.image_url %> " alt="" class="news-source-div-news-div-logo">
+
+									<% } %>
+										<a href="<%= news.article_url %>" class="news-individual-card-view-header"
+											target="_blank">
+											<%= news.title %>
+										</a>
+
+							</div>
+
+
+						</div>
+						<% } %>
+				</div>
+				<% counter++ %>
+					<% } %>
+
+	</div>
+
+	</div>

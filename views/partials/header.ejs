@@ -1,0 +1,170 @@
+<div id="header" class="">
+	<img id="brand-img" src="/images/50_sabencos_trd.svg" alt="">
+	<div id="brand-name">
+		SABENCOS
+	</div>
+</div>
+<div id="navbar-sub-div-overlay">
+	<div id="navbar-sub-div-overlay-div">
+		<button onclick="closeOverlay()" style="text-align:end;align-items: flex-end;">X</button>
+	</div>
+</div>
+<div id="side-nav" class="">
+	<div id="side-nav-button-div">
+		<!-- <input type="image" src="/images/50_hamburger.svg" style="width: 20px;height: 20px;"
+			id="nav-switch-button"
+			onclick="navButton()"></input> -->
+		<span id="side-nav-button-icon" onclick="navButton()"> &#9776 </span>
+
+	</div>
+	<div class="side-nav-sub">
+		<a href="/" class="side-nav-sub-a"><img src="/images/50_dash.svg" alt="ds"
+				class="side-nav-sub-image">
+			<span class="side-nav-sub-header">Home</span>
+		</a>
+
+	</div>
+	<div class="side-nav-sub">
+		<a href="/sabencos/locked/weather" class="side-nav-sub-a"><img src="/images/50_weather.svg" alt="Wh"
+				class="side-nav-sub-image">
+			<span class="side-nav-sub-header">Weather</span>
+		</a>
+
+	</div>
+	<div class="side-nav-sub">
+		<a href="/sabencos/locked/time" class="side-nav-sub-a"><img src="/images/50_clock.svg" alt="Cl"
+				class="side-nav-sub-image">
+			<span class="side-nav-sub-header">World Time</span>
+		</a>
+
+	</div>
+	<!-- india -->
+	<div class="side-nav-sub">
+		<div class="side-nav-sub-div">
+			<img src="/images/50_india.svg" alt="" class="side-nav-sub-image">
+			<span class="side-nav-sub-header">India News</span>
+			<div class="side-nav-sub-sub-links">
+				<div>
+					<a href="/news/mnt">Mint</a>
+				</div>
+				<div>
+					<a href="/news/moco">Money Control</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- North America -->
+	<div class="side-nav-sub">
+		<div href="/sabencos/news/wsj" class="side-nav-sub-div">
+			<img src="/images/50_usa.svg" alt="" class="side-nav-sub-image">
+			<span class="side-nav-sub-header">USA News</span>
+			<div class="side-nav-sub-sub-links">
+				<div>
+					<a href="/news/wsj">Wall Street Journal</a>
+				</div>
+				<div>
+					<a href="/news/cnbc">CNBC</a>
+				</div>
+
+			</div>
+
+
+		</div>
+
+	</div>
+	<!-- APAC -->
+	<div class="side-nav-sub">
+
+		<div href="/sabencos/news/wsj" class="side-nav-sub-div"><img src="/images/50_APAC.svg" alt=""
+				class="side-nav-sub-image">
+			<span class="side-nav-sub-header">APAC News</span>
+			<div class="side-nav-sub-sub-links">
+				<div>
+					<a href="/news/stt">Strait Times</a>
+				</div>
+				<div> <a href="/news/smh">Sydney Morning Herald</a></div>
+			</div>
+		</div>
+	</div>
+	<!-- Middle East -->
+	<div class="side-nav-sub">
+		<div class="side-nav-sub-div">
+			<img src="/images/50_MEA.svg" class="side-nav-sub-image" alt="">
+			<span class="side-nav-sub-header">Middle East</span>
+			<div class="side-nav-sub-sub-links">
+				<div>
+					<a href="/news/htz">Haartez</a>
+				</div>
+				<div>
+					<a href="/news/ans">Arab News</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- User Panel -->
+
+	<div class="side-nav-sub">
+		<% if(userType==null){ %>
+			<div class="side-nav-sub-div">
+
+				<img src="/images/500_new_user.svg" class="side-nav-sub-image" alt="">
+				<span class="side-nav-sub-header">User Setting</span>
+				<div class="side-nav-sub-sub-links">
+					<div>
+						<a href="/login">Login</a>
+					</div>
+					<div>
+						<a href="/newuser">Register</a>
+					</div>
+				</div>
+			</div>
+			<% } else{ %>
+				<a href="/user/dashboard" class="side-nav-sub-a"><img src="/images/500_loggid_in_user.svg"
+						alt="us"
+						class="side-nav-sub-image">
+					<span class="side-nav-sub-header">User Setting</span>
+				</a>
+				<% } %>
+
+
+	</div>
+	<!-- <div class="side-nav-sub">
+		<img src="/images/sabencos_logo.png" alt="" style="width: 30px; height:30px;">
+	</div>
+
+	<div class="side-nav-sub">
+		<img src="/images/sabencos_logo.png" alt="" style="width: 30px; height:30px;">
+	</div>
+
+	<div class="side-nav-sub">
+		<img src="/images/sabencos_logo.png" alt="" style="width: 30px; height:30px;">
+	</div>
+	<div class="side-nav-sub">
+		<img src="/images/sabencos_logo.png" alt="" style="width: 30px; height:30px;">
+	</div>
+
+	<div class="side-nav-sub">
+		<img src="/images/sabencos_logo.png" alt="" style="width: 30px; height:30px;">
+	</div>
+	<div class="side-nav-sub">
+		<img src="/images/sabencos_logo.png" alt="" style="width: 30px; height:30px;">
+	</div>
+
+	<div class="side-nav-sub">
+		<img src="/images/sabencos_logo.png" alt="" style="width: 30px; height:30px;">
+	</div>
+	<div class="side-nav-sub">
+		<img src="/images/sabencos_logo.png" alt="" style="width: 30px; height:30px;">
+	</div>
+	<div class="side-nav-sub">
+		<img src="/images/sabencos_logo.png" alt="" style="width: 30px; height:30px;">
+	</div>
+	<div class="side-nav-sub">
+		<img src="/images/sabencos_logo.png" alt="" style="width: 30px; height:30px;">
+	</div>
+	<div class="side-nav-sub">
+		<img src="/images/sabencos_logo.png" alt="" style="width: 30px; height:30px;"> -->
+
+</div>

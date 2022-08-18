@@ -1,0 +1,85 @@
+body {
+	background-color: #051e34;
+	align-items: center;
+	font-size: 1.5rem;
+}
+
+#header {
+	color: white;
+	top: 0;
+	background: #121212;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #051e34;
+	padding-bottom: 30px;
+
+}
+
+/* Brand head text */
+#brand-img {
+
+	height: 40px;
+	width: 40px;
+
+}
+
+#brand-name {
+	color: white;
+	font-size: 40px;
+	text-align: center;
+	font-family: 'KoHo', sans-serif;
+	align-items: center;
+}
+
+/* ******** div holding user form with all details in middle of page ********** */
+#contents-div {
+	width: fit-content;
+	margin: auto;
+	width: fit-content;
+	background-color: white;
+	box-shadow: rgba(255, 255, 255, 0.3) 6px 6px 6px;
+	align-items: center;
+	text-align: left;
+	padding: 40px;
+	font-family: 'Barlow Condensed', sans-serif;
+}
+
+/* for modifying input tag text */
+.input-tag {
+
+	width: 300px;
+	font-size: medium;
+}
+
+/* button submitting form */
+#submit-button {
+
+	background-color: #051e34;
+	border-radius: 16px;
+	width: 100%;
+	font-family: 'Barlow Condensed', sans-serif;
+	color: aliceblue;
+	font-size: 1.5rem;
+	margin-top: 8px;
+	text-transform: capitalize;
+
+}
+
+#submit-button:hover {
+	background-color: yellow;
+	color: #051e34
+}
+
+/* for anchor tags aka link */
+a {
+	text-decoration: none;
+	color: #051e34;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: orange;
+
+}

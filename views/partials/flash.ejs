@@ -1,0 +1,19 @@
+<% if(flashInfo && flashInfo.length) { %>
+	<div id="flash-message" style="color: skyblue;">
+		<%= flashInfo %>
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+	</div>
+	<% } %>
+
+
+		<!-- error display -->
+		<% if(flashError && flashError.length) { %>
+			<div style="color:red" id="flash-message">
+				<%= flashError %>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+			</div>
+			<% } %>

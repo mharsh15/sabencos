@@ -1,0 +1,72 @@
+<% layout("./boilerplate/boilerplate") %>
+
+
+	<div class="content-body">
+		<h1 class="breaking-news-title">
+			<a href="<%= breaking.article_url %> " target="_blank">
+				<%= breaking.title %>
+			</a>
+
+		</h1>
+		<div class="breaking-news-description-div">
+			<!-- <div id="breaking_news">Breaking News</div> -->
+			<div class="breaking-news-description">
+				<%= breaking.description %>
+
+			</div>
+			<div><img src="<%= breaking.image_url%>" class="breaking-news-description-image "></div>
+		</div>
+		<% counter=0 %>
+			<% for( let region of regions){ %>
+				<div class="<%= region.newsRegion %> region-fonts">
+					<%= region.newsRegion %>
+						<div class="triangle <%=counter%>"></div>
+
+				</div>
+
+				<!-- News Region like APAC NORTH AMERICAS -->
+				<div class="content-body-news" id="<%=counter%>">
+					<% counter++ %>
+
+						<% for(let newsSource of region.newsC){ %>
+							<!-- News Source Header -->
+							<div class="news-source-div">
+
+								<div class="news-source-div-news-type">
+									<span class="news-source-div-news-div-name">
+										<%= newsSource.newsName%>
+									</span>
+									<img src="<%= newsSource.newsLogo%>" alt="<%= newsSource.newsName%>"
+										class="news-source-div-news-div-logo">
+								</div>
+								<% for(let news of newsSource.newsList){ %>
+									<!-- individual Nnws -->
+									<div class="news-individual-card-view">
+										<!-- holds news -->
+										<div>
+											<div class="news-individual-card-view-type">
+												<%= news.category %>
+											</div>
+
+											<div class="news-individual-card-view-header">
+												<a class="news-individual-card-view-header" target="_blank"
+													href="<%= news.article_url %> ">
+													<%=news.title %>
+												</a>
+											</div>
+											<div class="news-individual-card-view-date">
+												<%= new Date(news.dt*1000).toLocaleDateString("en-is") %>
+											</div>
+
+										</div>
+										<!-- buttons -->
+										<div>
+											i
+										</div>
+									</div>
+									<% } %>
+							</div>
+							<% } %>
+				</div>
+				<% } %>
+	</div>

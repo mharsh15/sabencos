@@ -1,0 +1,34 @@
+<% layout("./boilerplate/sessionBoilerplate") %>
+
+	<div id="contents-div">
+
+		<h1>LOGIN</h1>
+		<%- include("../partials/flash") %>
+			<form action="/login" method="POST">
+				<div>
+					<label for="email">Email ID</label>
+					<div>
+						<input type="email" name="login[email]" id="email" class="input-tag" required>
+					</div>
+
+				</div>
+				<div> <label for="password">Password</label>
+					<div><input type="password" name="login[password]" id="password" class="input-tag" required></div>
+
+				</div>
+
+				<button id="submit-button">submit</button>
+			</form>
+			<hr style="background-color: black;">
+			<!-- Anchor tags for other actions -->
+			<div>
+				<a href="/reset">Click here if forgot password</a>
+			</div>
+			<div>
+				<a href="/newuser">New User? Click here to register</a>
+			</div>
+			<div>
+				<a href="/">Back to Dash</a>
+			</div>
+
+	</div>

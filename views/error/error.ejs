@@ -1,0 +1,10 @@
+<% layout("./boilerplate/boilerplate") %>
+	<div class="content-body">
+		<h1 style="text-align: center;margin-top: 30%;padding-left: 15px;">Some Error Happened!! <a href="/">Back to
+				Homepage</a></h1>
+		<% if(e !=null){ %>
+			<div>
+				<%= e %> error
+			</div>
+			<% } %>
+	</div>

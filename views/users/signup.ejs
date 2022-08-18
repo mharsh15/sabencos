@@ -1,0 +1,48 @@
+<% layout("./boilerplate/sessionBoilerplate") %>
+	<div id="contents-div">
+		<h1>SIGN-UP</h1>
+		<%- include("../partials/flash") %>
+			<form action="/newuser" method="POST">
+				<!-- emailid -->
+				<div>
+					<label for="email">Email ID</label>
+					<div><input type="email" name="login[email]" id="email" required class="input-tag"></div>
+
+
+				</div>
+				<!-- Name Details -->
+				<div>
+					<label for="firstName">First Name</label>
+					<div><input type="text" name="login[firstName]" id="firstName" required class="input-tag"></div>
+				</div>
+				<div>
+					<label for="lastName">Last Name</label>
+					<div><input type="text" name="login[lastName]" id="lastName" class="input-tag"></div>
+				</div>
+				<!-- password confirm -->
+				<div>
+					<label for="password">Password</label>
+					<div><input type="password" name="login[password]" id="password" required class="input-tag"></div>
+				</div>
+				<!-- password confirm -->
+				<div>
+					<label for="passwordConfirm">Confirm Password</label>
+					<div><input type="password" id="passwordConfirm" required class="input-tag"></div>
+				</div>
+				<!-- reason for account creation -->
+
+				<button id="submit-button">submit</button>
+			</form>
+			<hr style="background-color: black;">
+			<!-- Anchor tags for other actions -->
+			<div>
+				<a href="/reset">Click here if forgot password</a>
+			</div>
+			<div>
+				<a href="/login">Click here to sign in</a>
+			</div>
+			<div>
+				<a href="/">Back to Dash</a>
+			</div>
+
+	</div>
